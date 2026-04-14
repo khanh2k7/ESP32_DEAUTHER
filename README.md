@@ -14,6 +14,15 @@ Cho phép quét và ngắt kết nối (deauthenticate) các thiết bị đang 
 
 ---
 
+## Nguồn tham khảo
+
+Project này được phát triển dựa trên repo gốc:  
+**[tesa-klebeband/ESP32-Deauther](https://github.com/tesa-klebeband/ESP32-Deauther)**  
+
+Cảm ơn tác giả gốc đã tạo ra dự án tuyệt vời này.
+
+---
+
 ## Tính năng
 
 - Giao diện Web hiện đại, responsive (dùng tốt trên điện thoại)

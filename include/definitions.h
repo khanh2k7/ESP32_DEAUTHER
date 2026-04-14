@@ -2,7 +2,7 @@
 #define DEFINITIONS_H
 
 #define AP_SSID "ESP32-Deauther"
-#define AP_PASS "esp32wroom32"
+#define AP_PASS "Khanh2k7"
 #define LED 2
 
 #define SERIAL_DEBUG
