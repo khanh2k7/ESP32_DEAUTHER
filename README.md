@@ -28,27 +28,6 @@ Cho phép quét và ngắt kết nối (deauthenticate) các thiết bị đang 
 
 ---
 
-## Cách sử dụng
-
-1. **Kết nối với ESP32**
-   - Bật board → ESP32 sẽ tạo WiFi:
-     - **SSID**: `ESP32-Deauther`
-     - **Mật khẩu**: `esp32wroom32`
-   - Kết nối vào mạng này bằng điện thoại/máy tính
-
-2. **Truy cập giao diện**
-   - Mở trình duyệt → vào địa chỉ: **http://192.168.4.1**
-
-3. **Sử dụng**
-   - Nhấn **"Quét lại mạng"** để hiển thị danh sách WiFi
-   - **Tấn công một mạng**: Nhập số mạng + Reason Code (thường dùng **7**) → bấm tấn công
-   - **Tấn công tất cả**: Bấm nút **Deauth ALL**
-   - **Dừng tấn công**: Bấm nút **Dừng tất cả tấn công**
-
-LED trên board sẽ nháy mỗi khi deauth thành công.
-
----
-
 ## Hướng dẫn cài đặt
 
 ### Cách 1: PlatformIO (Khuyến nghị)
@@ -57,3 +36,42 @@ LED trên board sẽ nháy mỗi khi deauth thành công.
 2. Clone repository:
    ```bash
    git clone https://github.com/khanh2k7/ESP32_DEAUTHER.git
+
+## Cách sử dụng
+
+### 1. Kết nối với ESP32 Deauther
+
+Sau khi nạp code, ESP32 sẽ tạo một mạng WiFi mặc định:
+
+- **Tên WiFi (SSID)**: `ESP32-Deauther`
+- **Mật khẩu**: `esp32wroom32`
+
+Kết nối vào mạng này bằng điện thoại hoặc máy tính.
+
+### 2. Truy cập giao diện điều khiển
+
+Mở trình duyệt và truy cập địa chỉ:
+
+→ **http://192.168.4.1**
+
+### 3. Các chức năng chính
+
+- **Quét lại mạng**: Nhấn nút "Quét lại mạng" để hiển thị danh sách WiFi xung quanh.
+- **Tấn công một mạng**: Nhập số thứ tự của mạng + Reason Code (thường dùng **7**) → bấm "Bắt đầu tấn công mạng này".
+- **Tấn công tất cả**: Nhấn nút **Deauth ALL**.
+- **Dừng tấn công**: Nhấn nút **Dừng tất cả tấn công**.
+
+LED trên board sẽ nháy mỗi khi gửi gói deauth thành công.
+
+---
+
+## Thay đổi tên WiFi và mật khẩu (Rất quan trọng)
+
+Nếu bạn muốn đổi tên WiFi và mật khẩu khác, hãy làm theo các bước sau:
+
+1. Mở file **`include/definitions.h`**
+2. Sửa hai dòng sau cho phù hợp:
+
+```cpp
+#define AP_SSID "ESP32-Deauther"      // ← Thay tên WiFi ở đây
+#define AP_PASS "esp32wroom32"        // ← Thay mật khẩu ở đây
