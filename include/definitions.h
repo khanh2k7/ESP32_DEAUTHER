@@ -1,6 +1,8 @@
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
 
+#include <esp_wifi.h>
+
 #define AP_SSID "ESP32-Deauther"
 #define AP_PASS "Khanh2k7"
 #define LED 2
